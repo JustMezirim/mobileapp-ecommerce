@@ -1,23 +1,14 @@
 {
-  "builds": [
+  "buildCommand": "npm run build",
+  "outputDirectory": "admin/dist",
+  "rewrites": [
     {
-      "src": "admin/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
     },
     {
-      "src": "backend/src/server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/src/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "admin/dist/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
