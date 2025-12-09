@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: ecommerce-backend
+    name: ecommerce-app
     runtime: node
-    buildCommand: npm install --prefix backend
+    buildCommand: npm install --prefix backend && npm install --prefix admin && npm run build --prefix admin
     startCommand: npm start --prefix backend
     envVars:
       - key: NODE_ENV
