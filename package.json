@@ -6,7 +6,6 @@
   "engines": {
     "node": ">=20.0.0"
   },
-
   "scripts": {
     "build": "npm install --prefix admin && npm run build --prefix admin",
     "start": "npm run start --prefix backend"
@@ -24,4 +23,3 @@
   },
   "homepage": "https://github.com/JustMezirim/mobileapp-ecommerce#readme"
 }
-
