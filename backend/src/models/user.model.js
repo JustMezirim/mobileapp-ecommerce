@@ -1,11 +1,15 @@
 import mongoose from 'mongoose';
 
 const addressSchema = new mongoose.Schema({
-    label: {
+    fullName: {
         type: String,
         required: true,
     },
-    fullName: {
+    phoneNumber: {
+        type: String,
+        required: true,
+    },
+    label: {
         type: String,
         required: true,
     },
@@ -25,10 +29,6 @@ const addressSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    phoneNumber: {
-        type: String,
-        required: true,
-    },
     isDefault: {
         type: Boolean,
     }
@@ -43,6 +43,10 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+    },
+    phoneNumber: {
+        type: String,
+        default: ""
     },
     imageURL:{
         type: String,
